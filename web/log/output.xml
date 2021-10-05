@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20211005 14:08:35.187" rpa="false" schemaversion="2">
+<suite id="s1" name="Testes" source="c:\qaninja\robot\web\testes">
+<suite id="s1-s1" name="Login Form" source="c:\qaninja\robot\web\testes\login_form.robot">
+<test id="s1-s1-t1" name="Usuáro não existe">
+<kw name="Nova Sessão" library="base" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211005 14:08:35.437" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com'.</msg>
+<status status="PASS" starttime="20211005 14:08:35.436" endtime="20211005 14:08:46.413"/>
+</kw>
+<status status="PASS" starttime="20211005 14:08:35.436" endtime="20211005 14:08:46.414"/>
+</kw>
+<kw name="Dado que preencho o campo na tela de login" library="keywords">
+<kw name="Clicar botão login" library="resourceBDD">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${paginaLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211005 14:08:46.422" level="INFO">Clicking element 'xpath://*[@href='/login']'.</msg>
+<status status="PASS" starttime="20211005 14:08:46.420" endtime="20211005 14:08:47.559"/>
+</kw>
+<status status="PASS" starttime="20211005 14:08:46.418" endtime="20211005 14:08:47.561"/>
+</kw>
+<kw name="Preencher campos" library="resourceBDD">
+<arg>Giulia</arg>
+<arg>jarvis!</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoLogin}</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211005 14:08:47.564" level="INFO">Typing text 'Giulia' into text field 'css:input[name=username]'.</msg>
+<status status="PASS" starttime="20211005 14:08:47.562" endtime="20211005 14:08:47.693"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${campoSenha}</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211005 14:08:47.694" level="INFO">Typing text 'jarvis!' into text field 'css:input[name=password]'.</msg>
+<status status="PASS" starttime="20211005 14:08:47.693" endtime="20211005 14:08:47.814"/>
+</kw>
+<status status="PASS" starttime="20211005 14:08:47.561" endtime="20211005 14:08:47.814"/>
+</kw>
+<status status="PASS" starttime="20211005 14:08:46.417" endtime="20211005 14:08:47.814"/>
+</kw>
+<kw name="Quando aperto no botão de login" library="keywords">
+<kw name="Clicar botão" library="resourceBDD">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${botaoLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211005 14:08:47.816" level="INFO">Clicking element 'class:btn-login'.</msg>
+<status status="PASS" starttime="20211005 14:08:47.816" endtime="20211005 14:08:48.242"/>
+</kw>
+<status status="PASS" starttime="20211005 14:08:47.816" endtime="20211005 14:08:48.242"/>
+</kw>
+<status status="PASS" starttime="20211005 14:08:47.816" endtime="20211005 14:08:48.242"/>
+</kw>
+<kw name="Então sou direcionado a página principal" library="keywords">
+<kw name="Valida Login" library="resourceBDD">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>O usuário informado não está cadastrado!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211005 14:08:48.267" level="INFO">Current page contains text 'O usuário informado não está cadastrado!'.</msg>
+<status status="PASS" starttime="20211005 14:08:48.244" endtime="20211005 14:08:48.267"/>
+</kw>
+<status status="PASS" starttime="20211005 14:08:48.243" endtime="20211005 14:08:48.267"/>
+</kw>
+<status status="PASS" starttime="20211005 14:08:48.243" endtime="20211005 14:08:48.267"/>
+</kw>
+<kw name="Encerra Sessão" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211005 14:08:48.574" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211005 14:08:48.269" endtime="20211005 14:08:48.575"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211005 14:08:48.575" endtime="20211005 14:08:50.957"/>
+</kw>
+<status status="PASS" starttime="20211005 14:08:48.268" endtime="20211005 14:08:50.957"/>
+</kw>
+<tag>loginfailed</tag>
+<status status="PASS" starttime="20211005 14:08:35.436" endtime="20211005 14:08:50.957"/>
+</test>
+<status status="PASS" starttime="20211005 14:08:35.216" endtime="20211005 14:08:50.959"/>
+</suite>
+<status status="PASS" starttime="20211005 14:08:35.189" endtime="20211005 14:08:50.961"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">loginfailed</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testes">Testes</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Login Form">Testes.Login Form</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
