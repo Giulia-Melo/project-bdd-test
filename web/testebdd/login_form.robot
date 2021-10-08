@@ -5,13 +5,13 @@ Test Setup      Nova Sessão
 Test Teardown   Encerra Sessão 
 
 *** Test Cases ***
-Login com sucesso  
+Cenário: Login com sucesso  
     [tags]      loginsuccessed
     Dado que preencho para fazer login na página  
     Quando clico no botão login 
     Então sou direcionado para página inicial
     
-Usuáro não existe 
+Cenário: Usuáro não existe 
     [tags]      loginfailed
     Dado que preencho o campo na tela de login
     Quando aperto no botão de login
